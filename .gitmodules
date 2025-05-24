@@ -9,3 +9,4 @@
 [submodule "clm"]
 	path = clm
 	url = https://github.com/BETSY-Project/clm.git
+	branch = main

@@ -1,0 +1,17 @@
+services:
+  clm:
+    build:
+      context: ./clm
+      dockerfile: Dockerfile
+    ports:
+      - "9999:5000" # Expose CLM on host port 9999, mapping to container port 5000
+    environment:
+      - FLASK_ENV=development
+    volumes:
+      - ./clm/app:/app # Mount local app directory for live reloading
+      - clm_db_data:/app/clm_data # Persist SQLite database
+    restart: unless-stopped
+    container_name: clm
+
+volumes:
+  clm_db_data: # Define the named volume
