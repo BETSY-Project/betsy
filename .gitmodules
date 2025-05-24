@@ -6,3 +6,6 @@
 	path = server
 	url = https://github.com/BETSY-Project/server.git
 	branch = main
+[submodule "clm"]
+	path = clm
+	url = https://github.com/BETSY-Project/clm.git
